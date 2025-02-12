@@ -7,5 +7,6 @@
         public const string ELASTIC_URL = "https://localhost:9200/telemetry-statistics/_doc/";
         public const string ELASTIC_POST_TYPE = "application/json";
         public const string ELASTIC_POST_AUTHENTICANTION = "Basic";
+        public const string APPSETTINGS_PATH = "AppSettings/appsettings.json";
     }
 }
