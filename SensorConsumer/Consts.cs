@@ -8,5 +8,6 @@
         public const string ELASTIC_POST_TYPE = "application/json";
         public const string ELASTIC_POST_AUTHENTICANTION = "Basic";
         public const string APPSETTINGS_PATH = "AppSettings/appsettings.json";
+        public const string STATISTICS_TIMESTAMP_NAME = "timestamp";
     }
 }

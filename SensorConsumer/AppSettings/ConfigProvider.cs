@@ -11,6 +11,7 @@ namespace SensorConsumer.AppSettings
         private static ConfigProvider _instance;
         private static IConfigurationRoot _configFile;
         private KafkaSettings _kafkaSettings;
+        private MongoSettings _mongoSettings;
         public static ConfigProvider Instance
         {
             get
@@ -27,10 +28,15 @@ namespace SensorConsumer.AppSettings
             .AddJsonFile(Consts.APPSETTINGS_PATH, optional: false, reloadOnChange: true)
             .Build();
             _kafkaSettings = _configFile.GetRequiredSection(nameof(KafkaSettings)).Get<KafkaSettings>();
+            _mongoSettings = _configFile.GetRequiredSection(nameof(MongoSettings)).Get<MongoSettings>();
         }
         public KafkaSettings ProvideKafkaSettings()
         {
             return _kafkaSettings;                 
+        }        
+        public MongoSettings ProvideMongoSettings()
+        {
+            return _mongoSettings; 
         }
 
     }
